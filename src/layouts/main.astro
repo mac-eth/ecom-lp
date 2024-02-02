@@ -1,0 +1,47 @@
+---
+import {SEO} from "astro-seo";
+import Navbar from "../components/navbar/navbar.astro";
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <SEO
+      title="Ecom Explorer"
+      description="Ecom Explorer is an industry leading e-commerce coaching program designed to scale your business profitably to 7+ figures without paying thousands in agency retainers "
+      extend={{
+        // extending the default link tags
+        link: [{rel: "icon", href: "/favicon.ico"}],
+        // extending the default meta tags
+      }}
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style is:global>
+      @font-face {
+        font-family: "Satoshi";
+        src: url("/fonts/Satoshi-Variable.ttf") format("truetype-variations");
+        font-weight: 100 900; /* Adjust as needed */
+        font-style: normal;
+      }
+      @font-face {
+        font-family: "Satoshi";
+        src: url("/fonts/Satoshi-Italic-Variable.ttf")
+          format("truetype-variations");
+        font-weight: 100 900; /* Adjust as needed */
+        font-style: italic;
+      }
+      @font-face {
+        font-family: "Thunder";
+        src: url("/fonts/Thunder-VF.ttf") format("truetype-variations");
+        font-weight: 100 900; /* Adjust as needed */
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="bg-background relative font-satoshi">
+    <Navbar />
+    <slot />
+  </body>
+</html>
