@@ -6,17 +6,17 @@ export default function CTA() {
         <section className="bg-zinc-950 py-12 rounded-3xl">
                  <div className="mx-auto max-w-[88rem] px-6 pb-32 lg:px-8 pt-16 md:pt-24  ">
         <div className="mx-auto max-w-4xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
-          <div className="flex w-full flex-row items-center justify-center text-center lg:shrink-0">
+          <div className="flex w-full flex-col lg:flex-row items-center justify-center text-center lg:shrink-0">
             <div className="flex-col flex ">
 
            
         <h3
-          className="mt-8 font-thunder text-7xl font-bold text-start uppercase leading-[1] tracking-normal text-zinc-50"
+          className="mt-8 font-thunder text-7xl font-bold text-center lg:text-start uppercase leading-[1] tracking-normal text-zinc-50"
         >
           Want To Work With Us?
         </h3>
         <p
-          className="mt-6 max-w-3xl text-start text-2xl leading-7 text-zinc-200"
+          className="mt-6 max-w-3xl lg:text-start text-center text-2xl leading-7 text-zinc-200"
         >
           Scale Profitably To 7+ Figures Without Paying Thousands In Agency Retainers
         </p>
