@@ -36,7 +36,7 @@ const {title, lastItem, children} = Astro.props;
           class="px-3 lg:py-2 lg:bg-white lg:rounded-md lg:shadow lg:border flex flex-col"
         >
           {
-            children.map((item) => (
+            children.map((item: {title: string; path: string}) => (
               <a
                 href={item.path}
                 class="py-1  text-sm text-gray-600 hover:text-indigo-600 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:outline-none focus-visible:shadow-outline-indigo rounded"
@@ -47,14 +47,6 @@ const {title, lastItem, children} = Astro.props;
           }
         </div>
       </div>
-    </DropdownItems>
-  </NavDropdown>
-</li>
-        </div>
-      </div>
-    </DropdownItems>
-  </NavDropdown>
-</li>
     </DropdownItems>
   </NavDropdown>
 </li>

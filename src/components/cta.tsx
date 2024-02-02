@@ -16,7 +16,7 @@ export default function CTA() {
           Want To Work With Us?
         </h3>
         <p
-          className="mt-6 max-w-3xl text-start text-2xl leading-7 text-zinc-200 text-center"
+          className="mt-6 max-w-3xl text-start text-2xl leading-7 text-zinc-200"
         >
           Scale Profitably To 7+ Figures Without Paying Thousands In Agency Retainers
         </p>
