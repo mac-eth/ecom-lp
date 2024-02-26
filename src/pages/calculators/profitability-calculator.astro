@@ -1,0 +1,53 @@
+---
+import PageHeader from "../../components/ui/page-header.astro";
+import {Button} from "../../components/ui/button";
+import {CheckIcon} from "@radix-ui/react-icons";
+import {ProfitabilityForm} from "../../components/sections/profitability-form";
+import Main from "../../layouts/main.astro";
+import Container from "../../components/container.astro";
+
+const features = [
+  "Calculate Profitability",
+  "See results instantly",
+  "Use it to help set prices",
+];
+---
+
+<Main>
+  <Container>
+    <PageHeader>
+      <p slot="heading">Ecommerce Profitability Calculator</p>
+      <p slot="subHeading">
+        Calculate your profitability with our calculator and find out how much
+        you're earning with your current strategy.
+      </p>
+      <a href="#profitability-calculator" slot="mainButton" class="w-full">
+        <Button
+          size="lg"
+          className="w-full flex flex-row px-6 py-8 text-3xl font-semibold md:py-6 lg:px-12 lg:text-2xl"
+        >
+          Profitability Calculator
+        </Button>
+      </a>
+      <a
+        href="https://lp.ecomexplorer.com.au/questionnaire-mac"
+        slot="secondaryButton"
+        class="w-full"
+      >
+        <Button size="lg" variant="link" className="text-2xl underline ">
+          Book A Free Profitability Analysis Call
+        </Button>
+      </a>
+
+      {
+        features.map((feature) => (
+          <div class="flex w-full flex-row items-center gap-x-4">
+            <CheckIcon class="h-12 w-12 text-primary" />
+            <p class="text-2xl">{feature}</p>
+          </div>
+        ))
+      }
+    </PageHeader>
+    <ProfitabilityForm client:idle />
+  </Container>
+</Main>
