@@ -1,30 +1,8 @@
 ---
 import Container from "../../components/container.astro";
 import {Button} from "../ui/button";
-import Dropdown from "./dropdown.astro";
 import {StickyHeader, Astronav, MenuItems, MenuIcon} from "astro-navbar";
 
-interface MenuItem {
-  title: string;
-  path: string;
-  children?: MenuItem[];
-}
-
-const menuitems: MenuItem[] = [
-  {
-    title: "Casestudies",
-    path: "#casestudies",
-  },
-
-  {
-    title: "Our Secret Sauce",
-    path: "#profitability",
-  },
-  {
-    title: "Services",
-    path: "#services",
-  },
-];
 ---
 
 <StickyHeader
@@ -52,32 +30,6 @@ const menuitems: MenuItem[] = [
           </div>
         </div>
         <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-          <!-- <ul class="flex flex-col lg:flex-row lg:gap-3 items-center">
-            {
-              menuitems.map((item, index) => (
-                <>
-                  {item.children && (
-                    <Dropdown
-                      title={item.title}
-                      children={item.children}
-                      lastItem={index === menuitems.length - 1}
-                    />
-                  )}
-
-                  {!item.children && (
-                    <li>
-                      <a
-                        href={item.path}
-                        class="flex lg:px-3 py-2 text-xl md:text-base  text-zinc-800 hover:text-accent hover:underline underline-offset-4 duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-accent focus-visible:outline-none focus-visible:shadow-outline-indigo rounded-full"
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  )}
-                </>
-              ))
-            }
-          </ul> -->
           <div
             class="lg:hidden flex items-center mt-3 gap-4 w-full justify-center"
           >
